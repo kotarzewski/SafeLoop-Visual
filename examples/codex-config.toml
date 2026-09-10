@@ -1,0 +1,17 @@
+# Copy/adapt this section into your Codex config.toml.
+# Paths below are examples; use absolute paths on your machine.
+
+[mcp_servers.safeloop_visual]
+command = "C:\\Tools\\safeloop-visual\\.venv\\Scripts\\python.exe"
+args = ["-m", "safeloop_visual.server", "--workspace", "C:\\Projects\\MyGodotGame"]
+startup_timeout_ms = 20000
+env = {
+  SAFELOOP_ALLOW_DELETE = "0",
+  SAFELOOP_ALLOW_ENGINE = "1",
+  SAFELOOP_ALLOW_RUNTIME = "0",
+  SAFELOOP_ALLOW_NETWORKED_RUNTIME = "0",
+  SAFELOOP_ALLOW_RISKY_RUNTIME = "0"
+}
+
+# After reviewing the project and scan_runtime_risks, change
+# SAFELOOP_ALLOW_RUNTIME to "1" if you want Codex to capture real Godot renders.
